@@ -29,11 +29,6 @@ function getHumanChoice() {
 	}
 }
 
-let humanScore = 0;
-let computerScore = 0;
-
-console.log("Welcome to Rock, Raper, Scissors");
-playRound(getHumanChoice(), getComputerChoice());
 
 function playRound(humanChoice, computerChoice) {
 	let winner = compareResults(humanChoice, computerChoice);
@@ -54,18 +49,9 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function continueGame() {
-	while(true) {
-		let answer = prompt("Would you like to continue game? (y/n)");
-		answer.toLowerCase();
-		if (answer == "y" || answer == "n") {
-			if (answer == "y") {
-				return true;
-			} else { return false;}
-		} else {
-			continue;
-		}
-	}
+	  return confirm("Would you like to continue game?");	
 }
+
 // Like a java compareTo but for rps
 function compareResults(humanChoice, computerChoice) {
 	if (humanChoice == "rock") {
@@ -102,3 +88,17 @@ function compareResults(humanChoice, computerChoice) {
 	}
 	
 }
+
+let humanScore = 0;
+let computerScore = 0;
+
+function playGame() {
+	humanScore = 0;
+	computerScore = 0;
+
+	alert("Welcome to Rock, Paper Scissors");	
+	playRound(getHumanChoice(), getComputerChoice()); 
+}
+
+
+
