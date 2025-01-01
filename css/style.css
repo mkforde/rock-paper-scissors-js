@@ -4,20 +4,20 @@ body {
 	align-items: center;
 	flex-direction: column;
 	background-color: gray;
-	margin-top: 0;
+	margin: 0;
 }
 
 .container {
 	display: flex;
-	width: 100vh;
+	width: 100%;
 }
 
 header {
 	background-color: lightgreen;
-	width: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 100%;
 }
 
 button {
@@ -25,6 +25,8 @@ button {
 	padding: 24px;
 	background-color: lightblue;
 	font-size: 24px;
+	border-right: none;
+	border-left: none;
 }
 
 h1 {
