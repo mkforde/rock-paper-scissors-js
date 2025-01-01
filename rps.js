@@ -33,18 +33,18 @@ function getHumanChoice() {
 function playRound(humanChoice, computerChoice) {
 	let winner = compareResults(humanChoice, computerChoice);
 	if (winner == 0) {
-		console.log(`Its a draw! ${humanChoice} is equal to ${humanChoice}`);
+		alert(`Its a draw! ${humanChoice} is equal to ${humanChoice}`);
 	} else if (winner < 0) {
-		console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+		alert(`You lose! ${computerChoice} beats ${humanChoice}`);
 		computerScore++;
 	} else {
-		console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+		alert(`You win! ${humanChoice} beats ${computerChoice}`);
 		humanScore++;
 	}
 	if(continueGame()) {
 		playRound(getHumanChoice(), getComputerChoice());
 	} else {
-		console.log(`Thanks for playing. Final score is human: ${humanScore}, computer: ${computerScore}`);
+		alert(`Thanks for playing. Final score is human: ${humanScore}, computer: ${computerScore}`);
 	}	
 }
 
